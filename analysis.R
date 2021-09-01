@@ -7,7 +7,7 @@ library(ggplot2)
 library(multcomp)
 
 df <- readRDS("full-data.rds")
-
+write_csv(df, file = "full_data.csv")
 dplyr::group_by(df, event, School) %>% 
   dplyr::summarize(n = n())
 
