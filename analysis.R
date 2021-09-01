@@ -30,7 +30,7 @@ p + geom_point(alpha = .5) +
   guides(pch = "none") +
   theme_light()
 
-ggsave("fig/regression-fits.png", hei = 6, wid = 8)
+ggsave("regression-fits.png", hei = 6, wid = 8)
 
 ## Figs in paper
 
@@ -42,7 +42,7 @@ p + geom_density(alpha = .5) +
                                              '1650 yard freestyle')), 
              nrow = 3, scales = "free") +
   scale_fill_brewer(palette = "Dark2") +
-  labs(x = "improvement") +
+  labs(x = "improvement (seconds)") +
   theme_bw()
 
 ggsave("density-plots.png", wid = 7, hei = 9)
@@ -55,7 +55,8 @@ p + geom_boxplot() +
                                              '1650 yard freestyle')), 
              nrow = 3, scales = "free") +
   scale_fill_brewer(palette = "Dark2") +
-  labs(y = "improvment") +
+  labs(y = "improvment (seconds)",
+       x = "school") +
   theme_bw()
 
 ggsave("boxplots-plots.png", wid = 7, hei = 8)
